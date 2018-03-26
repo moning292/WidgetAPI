@@ -1,0 +1,22 @@
+{
+	"ad": {
+		"device": "mobile",
+		"site": "all"
+	},
+	"news story": {
+		"device": "all",
+		"site": "all"
+	},
+	"image gallery": {
+		"device": "desktop",
+		"site": ["perthnow", "dailytelegraph"]
+	},
+	"query": {
+		"device": "all",
+		"site": ["perthnow", "theaustralian"]
+	},
+	"video": {
+		"device": "desktop",
+		"site": ["dailytelegraph", "theaustralian"]
+	}
+}
