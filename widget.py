@@ -14,8 +14,10 @@ class Widget(object):
         #Load JSON file
         try:
             widget_data = json.loads(open(path).read())
+            with open('backup.json','w') as f:
+                json.dump(widget_data, f)
         except Exception as e:
-            #print('Invalid JSON: %s' %e)
+            print('ERROR: %s' % e)
             return None
         return widget_data
 
