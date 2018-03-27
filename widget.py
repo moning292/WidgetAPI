@@ -62,7 +62,7 @@ class Widget(object):
                         elif (self.widget_data[i][name] == 'all' or self.widget_data[i][name] == value):
                             search_result.append(i)
                 else:
-                    return 'Property \'%s\' is not found' % wname
+                    return 'Property \'%s\' is not found' % name
         return ','.join(search_result)
 
 class WidgetError(Exception):
