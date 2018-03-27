@@ -21,7 +21,7 @@ Test Coverage
 |Search Filter        |Test Case ID|     ad      | news story  |image gallery|  query   |   video  |
 |---------------------|------------|-------------|-------------|-------------|----------|----------|
 |device - mobile      |    TC1     |      Y      |       Y     |       N     |     Y    |     N    |
-|device - desktop     |    TC2     |      Y      |       Y     |       N     |     Y    |     N    |
+|device - desktop     |    TC2     |      N      |       Y     |       Y     |     Y    |     Y    |
 |device - all         |    TC3     |      Y      |       Y     |       Y     |     Y    |     Y    |
 |site - perthnow      |    TC4     |      Y      |       Y     |       Y     |     Y    |     N    |
 |site - dailytelegraph|    TC5     |      Y      |       Y     |       Y     |     N    |     Y    |
@@ -36,5 +36,8 @@ N - No, a widget won't show
 
 * device <> mobile, desktop or all
 * device is blank
+* device is none/null
 * site <> perthnow, dailytelegraph, theaustralian or all
 * site is blank
+* site is none/null
+* device/site contains special characters
