@@ -41,3 +41,4 @@ N - No, a widget won't show
 * site is blank
 * site is none/null
 * device/site contains special characters
+* keyword with whitespace
