@@ -12,12 +12,7 @@ class WidgetLibrary(object):
         else:
             self._result = 'JSON LOAD FAILED'
 
-    def testsearch(self, wname, wvalue, **kwargs):
-        if kwargs is not None:
-            for name, value in kwargs.items():
-                self._result = name
-
-    def search(self, wname, wvalue, **kwargs):
+    def search(self, wname, wvalue):
         if wname == 'EMPTY':
             wname = ''        
         if wvalue == 'EMPTY':
@@ -26,9 +21,16 @@ class WidgetLibrary(object):
             wname = None
         if wvalue == 'NULL':
             wvalue = None
-        self._result = self._widget.search(wname, wvalue, **kwargs)
+        self._result = self._widget.search(wname, wvalue)
     
     def result_should_be(self, expected_result):
         if expected_result != self._result:
             raise AssertionError("Expected result to be '%s' but was '%s'."
                                  % (expected_result, self._result))
+
+    #incomplete - can search device only
+    def search_with_filters(self, **kwargs):
+        if kwargs is not None:
+            self._result = self._widget.search_with_filters(**kwargs)
+        else:
+            self._result = 'No filter'
