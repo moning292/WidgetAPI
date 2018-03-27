@@ -1,7 +1,22 @@
 *** Settings ***
-Library                 WidgetLibrary.py
+Library         Collections
+Library         WidgetLibrary.py
 
 *** Test Cases ***
+Check json file
+    Check json
+    Result should be    JSON LOAD SUCCESS
+
+#Testsearch
+#    &{kwargs}   Create Dictionary    ddd=eeee
+#    Testsearch  device  dddd    &{kwargs}
+#    Result should be    cccc
+
+Search others all
+    #&{kwargs}   Create Dictionary    ddd=eeee
+    Search  size  all
+    Result should be    Property 'size' is not found 
+
 Search device all
     Search  device  all
     Result should be    ad,news story,image gallery,query,video    
@@ -36,4 +51,16 @@ Search EMPTY all
 
 Search special character
     Search  $$%%%%  &&@@@
-    Result should be    Invalid character    
+    Result should be    Invalid character
+
+Search NULL NULL
+    Search  NULL    NULL
+    Result should be    Search text is none
+
+Search site NULL
+    Search  site    NULL
+    Result should be    Search text is none
+
+Search NULL all
+    Search  NULL    all
+    Result should be    Search text is none
